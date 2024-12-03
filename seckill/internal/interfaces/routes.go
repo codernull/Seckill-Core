@@ -5,13 +5,14 @@ package interfaces
 import (
 	"bytes"
 	"context"
+	"io/ioutil"
+	"time"
+
 	"github.com/BitofferHub/pkg/constant"
 	engine "github.com/BitofferHub/pkg/middlewares/gin"
 	"github.com/BitofferHub/pkg/middlewares/log"
-	"github.com/bitstormhub/bitstorm/userX/internal/service"
+	"github.com/codernull/Seckill-Core/seckill/internal/service"
 	"github.com/gin-gonic/gin"
-	"io/ioutil"
-	"time"
 )
 
 type Handler struct {

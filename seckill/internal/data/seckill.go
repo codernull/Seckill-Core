@@ -4,8 +4,9 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+
 	"github.com/BitofferHub/pkg/middlewares/log"
-	"github.com/bitstormhub/bitstorm/userX/internal/biz"
+	"github.com/codernull/Seckill-Core/seckill/internal/biz"
 )
 
 type userXRepo struct {

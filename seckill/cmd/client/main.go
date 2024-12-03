@@ -3,13 +3,14 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/go-kratos/kratos/contrib/registry/etcd/v2"
-	"github.com/go-kratos/kratos/v2/transport/http"
-	clientv3 "go.etcd.io/etcd/client/v3"
 	"log"
 	"time"
 
-	pb "github.com/bitstormhub/bitstorm/userX/api/userX/v1"
+	"github.com/go-kratos/kratos/contrib/registry/etcd/v2"
+	"github.com/go-kratos/kratos/v2/transport/http"
+	clientv3 "go.etcd.io/etcd/client/v3"
+
+	pb "github.com/codernull/Seckill-Core/seckill/api/seckill/v1"
 	"github.com/go-kratos/kratos/v2/middleware/recovery"
 	transgrpc "github.com/go-kratos/kratos/v2/transport/grpc"
 )

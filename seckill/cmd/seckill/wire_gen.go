@@ -7,13 +7,13 @@
 package main
 
 import (
-	"github.com/bitstormhub/bitstorm/userX/internal/biz"
-	"github.com/bitstormhub/bitstorm/userX/internal/conf"
-	"github.com/bitstormhub/bitstorm/userX/internal/data"
-	"github.com/bitstormhub/bitstorm/userX/internal/interfaces"
-	"github.com/bitstormhub/bitstorm/userX/internal/server"
-	"github.com/bitstormhub/bitstorm/userX/internal/service"
-	"github.com/bitstormhub/bitstorm/userX/internal/task"
+	"github.com/codernull/Seckill-Core/seckill/internal/biz"
+	"github.com/codernull/Seckill-Core/seckill/internal/conf"
+	"github.com/codernull/Seckill-Core/seckill/internal/data"
+	"github.com/codernull/Seckill-Core/seckill/internal/interfaces"
+	"github.com/codernull/Seckill-Core/seckill/internal/server"
+	"github.com/codernull/Seckill-Core/seckill/internal/service"
+	"github.com/codernull/Seckill-Core/seckill/internal/task"
 	"github.com/go-kratos/kratos/v2"
 )
 

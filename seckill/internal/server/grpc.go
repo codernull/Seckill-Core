@@ -1,9 +1,9 @@
 package server
 
 import (
-	v1 "github.com/bitstormhub/bitstorm/userX/api/userX/v1"
-	"github.com/bitstormhub/bitstorm/userX/internal/conf"
-	"github.com/bitstormhub/bitstorm/userX/internal/service"
+	v1 "github.com/codernull/Seckill-Core/seckill/api/seckill/v1"
+	"github.com/codernull/Seckill-Core/seckill/internal/conf"
+	"github.com/codernull/Seckill-Core/seckill/internal/service"
 	mmd "github.com/go-kratos/kratos/v2/middleware/metadata"
 	"github.com/go-kratos/kratos/v2/middleware/recovery"
 	"github.com/go-kratos/kratos/v2/transport/grpc"

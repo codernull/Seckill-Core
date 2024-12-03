@@ -3,12 +3,13 @@ package task
 import (
 	"context"
 	"fmt"
-	pb "github.com/bitstormhub/bitstorm/userX/api/userX/v1"
-	"github.com/bitstormhub/bitstorm/userX/internal/conf"
-	"github.com/bitstormhub/bitstorm/userX/internal/service"
+	"time"
+
+	pb "github.com/codernull/Seckill-Core/seckill/api/seckill/v1"
+	"github.com/codernull/Seckill-Core/seckill/internal/conf"
+	"github.com/codernull/Seckill-Core/seckill/internal/service"
 	"github.com/google/uuid"
 	"github.com/google/wire"
-	"time"
 )
 
 // ProviderSet is service providers.

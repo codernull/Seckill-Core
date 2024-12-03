@@ -2,16 +2,17 @@ package main
 
 import (
 	"flag"
+	"os"
+
 	"github.com/BitofferHub/pkg/middlewares/discovery"
 	"github.com/BitofferHub/pkg/middlewares/log"
-	"github.com/bitstormhub/bitstorm/userX/internal/conf"
-	"github.com/bitstormhub/bitstorm/userX/internal/task"
+	"github.com/codernull/Seckill-Core/seckill/internal/conf"
+	"github.com/codernull/Seckill-Core/seckill/internal/task"
 	"github.com/go-kratos/kratos/v2"
 	"github.com/go-kratos/kratos/v2/config"
 	"github.com/go-kratos/kratos/v2/config/file"
 	"github.com/go-kratos/kratos/v2/transport/grpc"
 	"github.com/go-kratos/kratos/v2/transport/http"
-	"os"
 
 	_ "go.uber.org/automaxprocs"
 )

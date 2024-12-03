@@ -1,6 +1,6 @@
-module github.com/bitstormhub/bitstorm/userX
+module github.com/codernull/Seckill-Core/seckill
 
-go 1.19
+go 1.20
 
 require (
 	github.com/BitofferHub/pkg v1.0.3

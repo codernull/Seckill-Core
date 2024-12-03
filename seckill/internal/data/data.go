@@ -2,10 +2,11 @@ package data
 
 import (
 	"context"
+
 	"github.com/BitofferHub/pkg/middlewares/cache"
 	"github.com/BitofferHub/pkg/middlewares/gormcli"
-	"github.com/bitstormhub/bitstorm/userX/internal/biz"
-	"github.com/bitstormhub/bitstorm/userX/internal/conf"
+	"github.com/codernull/Seckill-Core/seckill/internal/biz"
+	"github.com/codernull/Seckill-Core/seckill/internal/conf"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/google/wire"
 	"gorm.io/gorm"

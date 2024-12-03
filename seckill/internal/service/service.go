@@ -1,8 +1,8 @@
 package service
 
 import (
-	pb "github.com/bitstormhub/bitstorm/userX/api/userX/v1"
-	"github.com/bitstormhub/bitstorm/userX/internal/biz"
+	pb "github.com/codernull/Seckill-Core/seckill/api/seckill/v1"
+	"github.com/codernull/Seckill-Core/seckill/internal/biz"
 	"github.com/google/wire"
 )
 

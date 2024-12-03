@@ -3,10 +3,11 @@ package interfaces
 import (
 	"context"
 	"fmt"
+
 	"github.com/BitofferHub/pkg/constant"
 	"github.com/BitofferHub/pkg/middlewares/log"
-	pb "github.com/bitstormhub/bitstorm/userX/api/userX/v1"
-	"github.com/bitstormhub/bitstorm/userX/internal/response"
+	pb "github.com/codernull/Seckill-Core/seckill/api/seckill/v1"
+	"github.com/codernull/Seckill-Core/seckill/internal/response"
 	"github.com/gin-gonic/gin"
 )
 
