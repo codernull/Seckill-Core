@@ -4,13 +4,14 @@
 package main
 
 import (
-	"github.com/bitstormhub/bitstorm/userX/internal/biz"
-	"github.com/bitstormhub/bitstorm/userX/internal/conf"
-	"github.com/bitstormhub/bitstorm/userX/internal/data"
-	"github.com/bitstormhub/bitstorm/userX/internal/interfaces"
-	"github.com/bitstormhub/bitstorm/userX/internal/server"
-	"github.com/bitstormhub/bitstorm/userX/internal/service"
-	"github.com/bitstormhub/bitstorm/userX/internal/task"
+	"Seckill-Core/internal/biz"
+	"Seckill-Core/internal/conf"
+	"Seckill-Core/internal/data"
+	"Seckill-Core/internal/interfaces"
+	"Seckill-Core/internal/server"
+	"Seckill-Core/internal/service"
+	"Seckill-Core/internal/task"
+
 	"github.com/go-kratos/kratos/v2"
 	"github.com/google/wire"
 )

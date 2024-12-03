@@ -3,24 +3,25 @@
 package interfaces
 
 import (
+	"Seckill-Core/internal/service"
 	"bytes"
 	"context"
+	"io/ioutil"
+	"time"
+
 	"github.com/BitofferHub/pkg/constant"
 	engine "github.com/BitofferHub/pkg/middlewares/gin"
 	"github.com/BitofferHub/pkg/middlewares/log"
-	"github.com/bitstormhub/bitstorm/userX/internal/service"
 	"github.com/gin-gonic/gin"
-	"io/ioutil"
-	"time"
 )
 
 type Handler struct {
-	userXService *service.UserXService
+	Seckill-CoreService *service.Seckill-CoreService
 }
 
-func NewHandler(s *service.UserXService) *Handler {
+func NewHandler(s *service.Seckill-CoreService) *Handler {
 	return &Handler{
-		userXService: s,
+		Seckill-CoreService: s,
 	}
 }
 

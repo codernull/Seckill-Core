@@ -1,18 +1,19 @@
 package data
 
 import (
+	"Seckill-Core/internal/biz"
 	"context"
 	"encoding/json"
 	"fmt"
+
 	"github.com/BitofferHub/pkg/middlewares/log"
-	"github.com/bitstormhub/bitstorm/userX/internal/biz"
 )
 
-type userXRepo struct {
+type Seckill-CoreRepo struct {
 	data *Data
 }
 
-func (r *userXRepo) Delete(ctx context.Context, id int64) error {
+func (r *Seckill-CoreRepo) Delete(ctx context.Context, id int64) error {
 	return r.data.DB(ctx).Where("id = ?", id).Delete(&biz.User{}).Error
 }
 
@@ -22,8 +23,8 @@ func (r *userXRepo) Delete(ctx context.Context, id int64) error {
 //	@Description:
 //	@param data
 //	@return biz.UserRepo
-func NewUserXRepo(data *Data) biz.UserRepo {
-	return &userXRepo{
+func NewSeckill-CoreRepo(data *Data) biz.UserRepo {
+	return &Seckill-CoreRepo{
 		data: data,
 	}
 }
@@ -38,7 +39,7 @@ func NewUserXRepo(data *Data) biz.UserRepo {
 //	@param g
 //	@return *biz.User
 //	@return error
-func (r *userXRepo) Save(ctx context.Context, g *biz.User) (*biz.User, error) {
+func (r *Seckill-CoreRepo) Save(ctx context.Context, g *biz.User) (*biz.User, error) {
 	// 开启事务的话, 需要调用r.data.DB(ctx) 而不是r.data.db
 	err := r.data.DB(ctx).Create(g).Error
 	return g, err
@@ -54,7 +55,7 @@ func (r *userXRepo) Save(ctx context.Context, g *biz.User) (*biz.User, error) {
 //	@param g
 //	@return *biz.User
 //	@return error
-func (r *userXRepo) Update(ctx context.Context, g *biz.User) (*biz.User, error) {
+func (r *Seckill-CoreRepo) Update(ctx context.Context, g *biz.User) (*biz.User, error) {
 	err := r.data.db.WithContext(ctx).Updates(g).Error
 	return g, err
 }
@@ -69,7 +70,7 @@ func (r *userXRepo) Update(ctx context.Context, g *biz.User) (*biz.User, error) 
 //	@param userID
 //	@return *biz.User
 //	@return error
-func (r *userXRepo) FindByIDWithCache(ctx context.Context,
+func (r *Seckill-CoreRepo) FindByIDWithCache(ctx context.Context,
 	userID int64) (*biz.User, error) {
 	cacheKey := fmt.Sprintf("userinfo:%d", userID)
 	var user = new(biz.User)
@@ -104,7 +105,7 @@ func (r *userXRepo) FindByIDWithCache(ctx context.Context,
 //	@param userID
 //	@return *biz.User
 //	@return error
-func (r *userXRepo) FindByID(ctx context.Context, userID int64) (*biz.User, error) {
+func (r *Seckill-CoreRepo) FindByID(ctx context.Context, userID int64) (*biz.User, error) {
 	var user biz.User
 	err := r.data.db.WithContext(ctx).Where("id = ?", userID).First(&user).Error
 	if err != nil {
@@ -123,7 +124,7 @@ func (r *userXRepo) FindByID(ctx context.Context, userID int64) (*biz.User, erro
 //	@param userName
 //	@return *biz.User
 //	@return error
-func (r *userXRepo) FindByName(ctx context.Context, userName string) (*biz.User, error) {
+func (r *Seckill-CoreRepo) FindByName(ctx context.Context, userName string) (*biz.User, error) {
 	var user biz.User
 	err := r.data.db.WithContext(ctx).Where("user_name = ?", userName).First(&user).Error
 	if err != nil {
@@ -141,6 +142,6 @@ func (r *userXRepo) FindByName(ctx context.Context, userName string) (*biz.User,
 //	@param data
 //	@return []*biz.User
 //	@return error
-func (r *userXRepo) ListAll(ctx context.Context) ([]*biz.User, error) {
+func (r *Seckill-CoreRepo) ListAll(ctx context.Context) ([]*biz.User, error) {
 	return nil, nil
 }

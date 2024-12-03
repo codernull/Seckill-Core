@@ -3,10 +3,13 @@ package interfaces
 import (
 	"context"
 	"fmt"
+
+	pb "api/Seckill-Core/v1"
+
+	"Seckill-Core/internal/response"
+
 	"github.com/BitofferHub/pkg/constant"
 	"github.com/BitofferHub/pkg/middlewares/log"
-	pb "github.com/bitstormhub/bitstorm/userX/api/userX/v1"
-	"github.com/bitstormhub/bitstorm/userX/internal/response"
 	"github.com/gin-gonic/gin"
 )
 
@@ -22,7 +25,7 @@ func (h *Handler) GetUserInfo(c *gin.Context) {
 	}
 
 	ctx := context.WithValue(context.Background(), constant.TraceID, traceID)
-	resp, err := h.userXService.GetUser(ctx, &req)
+	resp, err := h.Seckill - CoreService.GetUser(ctx, &req)
 	if err != nil {
 		fmt.Println("get user err", err)
 		response.Fail(c, response.GetUserError, nil)
@@ -43,7 +46,7 @@ func (h *Handler) CreateUserInfo(ctx *gin.Context) {
 	}
 
 	c := context.WithValue(context.Background(), constant.TraceID, traceID)
-	_, err := h.userXService.CreateUser(c, &req)
+	_, err := h.Seckill - CoreService.CreateUser(c, &req)
 	if err != nil {
 		log.Errorf("CreateShortUrlV1 err: %v", err)
 		response.Fail(ctx, response.CreateUserErr, nil)

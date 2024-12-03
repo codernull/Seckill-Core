@@ -1,8 +1,9 @@
 package server
 
 import (
-	"github.com/bitstormhub/bitstorm/userX/internal/conf"
-	"github.com/bitstormhub/bitstorm/userX/internal/interfaces"
+	"Seckill-Core/internal/conf"
+	"Seckill-Core/internal/interfaces"
+
 	"github.com/go-kratos/kratos/v2/middleware/recovery"
 	"github.com/go-kratos/kratos/v2/transport/http"
 )

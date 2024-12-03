@@ -3,14 +3,14 @@
 
 openapi: 3.0.3
 info:
-    title: UserX API
+    title: Seckill-Core API
     version: 0.0.1
 paths:
     /create_user:
         post:
             tags:
-                - UserX
-            operationId: UserX_CreateUser
+                - Seckill-Core
+            operationId: Seckill-Core_CreateUser
             requestBody:
                 content:
                     application/json:
@@ -27,8 +27,8 @@ paths:
     /get_user_info:
         get:
             tags:
-                - UserX
-            operationId: UserX_GetUser
+                - Seckill-Core
+            operationId: Seckill-Core_GetUser
             parameters:
                 - name: userId
                   in: query
@@ -44,8 +44,8 @@ paths:
     /get_user_info_byname:
         get:
             tags:
-                - UserX
-            operationId: UserX_GetUserByName
+                - Seckill-Core
+            operationId: Seckill-Core_GetUserByName
             parameters:
                 - name: userName
                   in: query
@@ -142,4 +142,4 @@ components:
                 idCard:
                     type: string
 tags:
-    - name: UserX
+    - name: Seckill-Core

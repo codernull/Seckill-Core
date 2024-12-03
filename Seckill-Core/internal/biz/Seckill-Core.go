@@ -34,15 +34,15 @@ type UserRepo interface {
 	Delete(context.Context, int64) error
 }
 
-// UserXUseCase is a User usecase.
-type UserXUseCase struct {
+// Seckill-CoreUseCase is a User usecase.
+type Seckill-CoreUseCase struct {
 	repo UserRepo
 	tm   Transaction
 }
 
 // NewUserUseCase new a User usecase.
-func NewUserXUseCase(repo UserRepo, tm Transaction) *UserXUseCase {
-	return &UserXUseCase{repo: repo, tm: tm}
+func NewSeckill-CoreUseCase(repo UserRepo, tm Transaction) *Seckill-CoreUseCase {
+	return &Seckill-CoreUseCase{repo: repo, tm: tm}
 }
 
 // CreateUser
@@ -55,7 +55,7 @@ func NewUserXUseCase(repo UserRepo, tm Transaction) *UserXUseCase {
 //	@param g
 //	@return *User
 //	@return error
-func (uc *UserXUseCase) CreateUser(ctx context.Context, g *User) (*User, error) {
+func (uc *Seckill-CoreUseCase) CreateUser(ctx context.Context, g *User) (*User, error) {
 	var user *User
 	var err error
 	// 开启事务
@@ -84,7 +84,7 @@ func (uc *UserXUseCase) CreateUser(ctx context.Context, g *User) (*User, error) 
 //	@param userID
 //	@return *User
 //	@return error
-func (uc *UserXUseCase) GetUserInfo(ctx context.Context, userID int64) (*User, error) {
+func (uc *Seckill-CoreUseCase) GetUserInfo(ctx context.Context, userID int64) (*User, error) {
 	return uc.repo.FindByID(ctx, userID)
 }
 
@@ -98,6 +98,6 @@ func (uc *UserXUseCase) GetUserInfo(ctx context.Context, userID int64) (*User, e
 //	@param userName
 //	@return *User
 //	@return error
-func (uc *UserXUseCase) GetUserInfoByName(ctx context.Context, userName string) (*User, error) {
+func (uc *Seckill-CoreUseCase) GetUserInfoByName(ctx context.Context, userName string) (*User, error) {
 	return uc.repo.FindByName(ctx, userName)
 }

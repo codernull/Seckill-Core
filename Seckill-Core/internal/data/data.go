@@ -1,18 +1,19 @@
 package data
 
 import (
+	"Seckill-Core/internal/biz"
+	"Seckill-Core/internal/conf"
 	"context"
+
 	"github.com/BitofferHub/pkg/middlewares/cache"
 	"github.com/BitofferHub/pkg/middlewares/gormcli"
-	"github.com/bitstormhub/bitstorm/userX/internal/biz"
-	"github.com/bitstormhub/bitstorm/userX/internal/conf"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/google/wire"
 	"gorm.io/gorm"
 )
 
 // ProviderSet is data providers.
-var ProviderSet = wire.NewSet(NewData, NewUserXRepo, NewDatabase, NewCache, NewTransaction)
+var ProviderSet = wire.NewSet(NewData, NewSeckill-CoreRepo, NewDatabase, NewCache, NewTransaction)
 
 type contextTxKey struct{}
 

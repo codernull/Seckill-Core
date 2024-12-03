@@ -3,12 +3,15 @@ package task
 import (
 	"context"
 	"fmt"
-	pb "github.com/bitstormhub/bitstorm/userX/api/userX/v1"
-	"github.com/bitstormhub/bitstorm/userX/internal/conf"
-	"github.com/bitstormhub/bitstorm/userX/internal/service"
+	"time"
+
+	pb "api/Seckill-Core/v1"
+
+	"Seckill-Core/internal/conf"
+	"Seckill-Core/internal/service"
+
 	"github.com/google/uuid"
 	"github.com/google/wire"
-	"time"
 )
 
 // ProviderSet is service providers.
@@ -16,7 +19,7 @@ var ProviderSet = wire.NewSet(NewTaskServer)
 
 type TaskServer struct {
 	// 需要什么service, 就修改成自己的service
-	service   *service.UserXService
+	service   *service.Seckill-CoreService
 	scheduler *TaskScheduler
 }
 
@@ -31,7 +34,7 @@ func (t *TaskServer) NewJobs() []Job {
 }
 
 // 注入对应service
-func NewTaskServer(s *service.UserXService, c *conf.Server) *TaskServer {
+func NewTaskServer(s *service.Seckill-CoreService, c *conf.Server) *TaskServer {
 	t := &TaskServer{
 		service: s,
 	}

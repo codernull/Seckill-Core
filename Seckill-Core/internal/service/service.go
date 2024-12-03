@@ -1,25 +1,27 @@
 package service
 
 import (
-	pb "github.com/bitstormhub/bitstorm/userX/api/userX/v1"
-	"github.com/bitstormhub/bitstorm/userX/internal/biz"
+	pb "api/Seckill-Core/v1"
+
+	"Seckill-Core/internal/biz"
+
 	"github.com/google/wire"
 )
 
 // ProviderSet is service providers.
-var ProviderSet = wire.NewSet(NewUserXService)
+var ProviderSet = wire.NewSet(NewSeckill-CoreService)
 
-type UserXService struct {
-	pb.UnimplementedUserXServer
-	uc *biz.UserXUseCase
+type Seckill-CoreService struct {
+	pb.UnimplementedSeckill-CoreServer
+	uc *biz.Seckill-CoreUseCase
 }
 
-// NewUserXService
+// NewSeckill-CoreService
 //
 //	@Author <a href="https://bitoffer.cn">狂飙训练营</a>
 //	@Description:
 //	@param uc
-//	@return *UserXService
-func NewUserXService(uc *biz.UserXUseCase) *UserXService {
-	return &UserXService{uc: uc}
+//	@return *Seckill-CoreService
+func NewSeckill-CoreService(uc *biz.Seckill-CoreUseCase) *Seckill-CoreService {
+	return &Seckill-CoreService{uc: uc}
 }

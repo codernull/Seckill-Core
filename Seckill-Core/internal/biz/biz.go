@@ -2,11 +2,12 @@ package biz
 
 import (
 	"context"
+
 	"github.com/google/wire"
 )
 
 // 注入UseCase的地方
-var ProviderSet = wire.NewSet(NewUserXUseCase)
+var ProviderSet = wire.NewSet(NewSeckill - CoreUseCase)
 
 // 解耦biz与data层，biz层只调用接口的方法
 type Transaction interface {

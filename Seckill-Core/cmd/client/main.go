@@ -3,13 +3,15 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/go-kratos/kratos/contrib/registry/etcd/v2"
-	"github.com/go-kratos/kratos/v2/transport/http"
-	clientv3 "go.etcd.io/etcd/client/v3"
 	"log"
 	"time"
 
-	pb "github.com/bitstormhub/bitstorm/userX/api/userX/v1"
+	"github.com/go-kratos/kratos/contrib/registry/etcd/v2"
+	"github.com/go-kratos/kratos/v2/transport/http"
+	clientv3 "go.etcd.io/etcd/client/v3"
+
+	pb "api/Seckill-Core/v1"
+
 	"github.com/go-kratos/kratos/v2/middleware/recovery"
 	transgrpc "github.com/go-kratos/kratos/v2/transport/grpc"
 )
@@ -36,7 +38,7 @@ func callGRPC() {
 		panic(err)
 	}
 	defer conn.Close()
-	client := pb.NewUserXClient(conn)
+	client := pb.NewSeckill - CoreClient(conn)
 	reply, err := client.CreateUser(context.Background(), &pb.CreateUserRequest{UserName: "niuniu"})
 	if err != nil {
 		log.Fatal(err)
@@ -67,7 +69,7 @@ func callGRPCDiscover() {
 	}
 
 	defer conn.Close()
-	cli := pb.NewUserXClient(conn)
+	cli := pb.NewSeckill - CoreClient(conn)
 	reply, err := cli.CreateUser(context.Background(), &pb.CreateUserRequest{UserName: "niuniu"})
 	if err != nil {
 		log.Fatal(err)
@@ -101,7 +103,7 @@ func callHTTP() {
 	}
 	defer connHTTP.Close()
 
-	httpClient := pb.NewUserXHTTPClient(connHTTP)
+	httpClient := pb.NewSeckill - CoreHTTPClient(connHTTP)
 	fmt.Printf("before call\n")
 	reply, err := httpClient.GetUser(context.Background(), &pb.GetUserRequest{UserId: 1})
 	if err != nil {

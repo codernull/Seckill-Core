@@ -46,7 +46,7 @@ log:
   max_size: 100 # 日志保留大小，以 M 为单位
   max_backups: 3 # 保留文件个数
   console: true # false为不打印到终端
-  filename: userx.log
+  filename: Seckill-Core.log
 
 
 #cron 表达式

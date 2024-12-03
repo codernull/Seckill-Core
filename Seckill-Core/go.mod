@@ -1,4 +1,4 @@
-module github.com/bitstormhub/bitstorm/userX
+module Seckill-Core
 
 go 1.19
 

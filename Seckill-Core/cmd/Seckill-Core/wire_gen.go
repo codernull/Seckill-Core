@@ -7,13 +7,13 @@
 package main
 
 import (
-	"github.com/bitstormhub/bitstorm/userX/internal/biz"
-	"github.com/bitstormhub/bitstorm/userX/internal/conf"
-	"github.com/bitstormhub/bitstorm/userX/internal/data"
-	"github.com/bitstormhub/bitstorm/userX/internal/interfaces"
-	"github.com/bitstormhub/bitstorm/userX/internal/server"
-	"github.com/bitstormhub/bitstorm/userX/internal/service"
-	"github.com/bitstormhub/bitstorm/userX/internal/task"
+	"Seckill-Core/internal/biz"
+	"Seckill-Core/internal/conf"
+	"Seckill-Core/internal/data"
+	"Seckill-Core/internal/interfaces"
+	"Seckill-Core/internal/server"
+	"Seckill-Core/internal/service"
+	"Seckill-Core/internal/task"
 	"github.com/go-kratos/kratos/v2"
 )
 
@@ -36,14 +36,14 @@ func wireApp(confServer *conf.Server, confData *conf.Data) (*kratos.App, func(),
 	db := data.NewDatabase(confData)
 	client := data.NewCache(confData)
 	dataData := data.NewData(db, client)
-	userRepo := data.NewUserXRepo(dataData)
+	userRepo := data.NewSeckill-CoreRepo(dataData)
 	transaction := data.NewTransaction(dataData)
-	userXUseCase := biz.NewUserXUseCase(userRepo, transaction)
-	userXService := service.NewUserXService(userXUseCase)
-	grpcServer := server.NewGRPCServer(confServer, userXService)
-	handler := interfaces.NewHandler(userXService)
+	Seckill-CoreUseCase := biz.NewSeckill-CoreUseCase(userRepo, transaction)
+	Seckill-CoreService := service.NewSeckill-CoreService(Seckill-CoreUseCase)
+	grpcServer := server.NewGRPCServer(confServer, Seckill-CoreService)
+	handler := interfaces.NewHandler(Seckill-CoreService)
 	httpServer := server.NewHTTPServer(confServer, handler)
-	taskServer := task.NewTaskServer(userXService, confServer)
+	taskServer := task.NewTaskServer(Seckill-CoreService, confServer)
 	app := newApp(grpcServer, httpServer, taskServer)
 	return app, func() {
 	}, nil

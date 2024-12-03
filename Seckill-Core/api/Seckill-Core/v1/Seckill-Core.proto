@@ -6,10 +6,10 @@ import "google/api/annotations.proto";
 package api.shortUrlX.v1;
 option go_package = "github.com/bitstormhub/bitstorm/shortUrlX/api/shortUrlX/v1;v1";
 option java_multiple_files = true;
-option java_package = "api.userX.v1";
+option java_package = "api.Seckill-Core.v1";
 
 
-service UserX {
+service Seckill-Core {
 	rpc CreateUser (CreateUserRequest) returns (CreateUserReply){
 		option (google.api.http) = {
 			post: "/create_user",

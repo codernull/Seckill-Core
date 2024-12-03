@@ -1,17 +1,18 @@
 package main
 
 import (
+	"Seckill-Core/internal/conf"
+	"Seckill-Core/internal/task"
 	"flag"
+	"os"
+
 	"github.com/BitofferHub/pkg/middlewares/discovery"
 	"github.com/BitofferHub/pkg/middlewares/log"
-	"github.com/bitstormhub/bitstorm/userX/internal/conf"
-	"github.com/bitstormhub/bitstorm/userX/internal/task"
 	"github.com/go-kratos/kratos/v2"
 	"github.com/go-kratos/kratos/v2/config"
 	"github.com/go-kratos/kratos/v2/config/file"
 	"github.com/go-kratos/kratos/v2/transport/grpc"
 	"github.com/go-kratos/kratos/v2/transport/http"
-	"os"
 
 	_ "go.uber.org/automaxprocs"
 )
@@ -19,7 +20,7 @@ import (
 // go build -ldflags "-X main.Version=x.y.z"
 var (
 	// Name is the name of the compiled software.
-	Name string = "userX-svr"
+	Name string = "Seckill-Core-svr"
 	// Version is the version of the compiled software.
 	Version string
 	// flagconf is the config flag.

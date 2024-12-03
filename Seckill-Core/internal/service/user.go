@@ -2,8 +2,10 @@ package service
 
 import (
 	"context"
-	pb "github.com/bitstormhub/bitstorm/userX/api/userX/v1"
-	"github.com/bitstormhub/bitstorm/userX/internal/biz"
+
+	pb "api/Seckill-Core/v1"
+
+	"Seckill-Core/internal/biz"
 )
 
 // CreateUser
@@ -15,7 +17,7 @@ import (
 //	@param req
 //	@return *pb.CreateUserReply
 //	@return error
-func (s *UserXService) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (*pb.CreateUserReply, error) {
+func (s *Seckill-CoreService) CreateUser(ctx context.Context, req *pb.CreateUserRequest) (*pb.CreateUserReply, error) {
 	_, err := s.uc.CreateUser(ctx, &biz.User{
 		UserName: req.UserName,
 		Pwd:      req.Pwd,
@@ -31,7 +33,7 @@ func (s *UserXService) CreateUser(ctx context.Context, req *pb.CreateUserRequest
 	}
 	return &pb.CreateUserReply{Message: "trytest"}, nil
 }
-func (s *UserXService) UpdateUser(ctx context.Context, req *pb.UpdateUserRequest) (*pb.UpdateUserReply, error) {
+func (s *Seckill-CoreService) UpdateUser(ctx context.Context, req *pb.UpdateUserRequest) (*pb.UpdateUserReply, error) {
 	return &pb.UpdateUserReply{}, nil
 }
 
@@ -44,7 +46,7 @@ func (s *UserXService) UpdateUser(ctx context.Context, req *pb.UpdateUserRequest
 //	@param req
 //	@return *pb.DeleteUserReply
 //	@return error
-func (s *UserXService) DeleteUser(ctx context.Context, req *pb.DeleteUserRequest) (*pb.DeleteUserReply, error) {
+func (s *Seckill-CoreService) DeleteUser(ctx context.Context, req *pb.DeleteUserRequest) (*pb.DeleteUserReply, error) {
 	return &pb.DeleteUserReply{}, nil
 }
 
@@ -57,7 +59,7 @@ func (s *UserXService) DeleteUser(ctx context.Context, req *pb.DeleteUserRequest
 //	@param req
 //	@return *pb.GetUserReply
 //	@return error
-func (s *UserXService) GetUser(ctx context.Context, req *pb.GetUserRequest) (*pb.GetUserReply, error) {
+func (s *Seckill-CoreService) GetUser(ctx context.Context, req *pb.GetUserRequest) (*pb.GetUserReply, error) {
 	userInfo, err := s.uc.GetUserInfo(ctx, req.UserId)
 	if err != nil {
 		return nil, err
@@ -87,7 +89,7 @@ func (s *UserXService) GetUser(ctx context.Context, req *pb.GetUserRequest) (*pb
 //	@param req
 //	@return *pb.GetUserByNameReply
 //	@return error
-func (s *UserXService) GetUserByName(ctx context.Context, req *pb.GetUserByNameRequest) (*pb.GetUserByNameReply, error) {
+func (s *Seckill-CoreService) GetUserByName(ctx context.Context, req *pb.GetUserByNameRequest) (*pb.GetUserByNameReply, error) {
 	userInfo, err := s.uc.GetUserInfoByName(ctx, req.UserName)
 	if err != nil {
 		return nil, err
@@ -118,12 +120,12 @@ func (s *UserXService) GetUserByName(ctx context.Context, req *pb.GetUserByNameR
 //	@param req
 //	@return *pb.ListUserReply
 //	@return error
-func (s *UserXService) ListUser(ctx context.Context, req *pb.ListUserRequest) (*pb.ListUserReply, error) {
+func (s *Seckill-CoreService) ListUser(ctx context.Context, req *pb.ListUserRequest) (*pb.ListUserReply, error) {
 	return &pb.ListUserReply{}, nil
 }
 
 // 执行定时任务
-func (u *UserXService) Cronjob(ctx context.Context, req *pb.CreateUserRequest) {
+func (u *Seckill-CoreService) Cronjob(ctx context.Context, req *pb.CreateUserRequest) {
 	u.uc.CreateUser(ctx, &biz.User{
 		UserName: req.UserName,
 		Pwd:      req.Pwd,
