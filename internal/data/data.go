@@ -5,8 +5,8 @@ import (
 
 	"github.com/BitofferHub/pkg/middlewares/cache"
 	"github.com/BitofferHub/pkg/middlewares/gormcli"
-	"github.com/codernull/Seckill-Core/seckill/internal/biz"
-	"github.com/codernull/Seckill-Core/seckill/internal/conf"
+	"github.com/codernull/seckill/internal/biz"
+	"github.com/codernull/seckill/internal/conf"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/google/wire"
 	"gorm.io/gorm"

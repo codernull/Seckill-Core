@@ -1,4 +1,4 @@
-module github.com/codernull/Seckill-Core
+module github.com/codernull/seckill
 
 go 1.20
 

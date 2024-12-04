@@ -7,13 +7,13 @@
 package main
 
 import (
-	"github.com/codernull/Seckill-Core/seckill/internal/biz"
-	"github.com/codernull/Seckill-Core/seckill/internal/conf"
-	"github.com/codernull/Seckill-Core/seckill/internal/data"
-	"github.com/codernull/Seckill-Core/seckill/internal/interfaces"
-	"github.com/codernull/Seckill-Core/seckill/internal/server"
-	"github.com/codernull/Seckill-Core/seckill/internal/service"
-	"github.com/codernull/Seckill-Core/seckill/internal/task"
+	"github.com/codernull/seckill/internal/biz"
+	"github.com/codernull/seckill/internal/conf"
+	"github.com/codernull/seckill/internal/data"
+	"github.com/codernull/seckill/internal/interfaces"
+	"github.com/codernull/seckill/internal/server"
+	"github.com/codernull/seckill/internal/service"
+	"github.com/codernull/seckill/internal/task"
 	"github.com/go-kratos/kratos/v2"
 )
 

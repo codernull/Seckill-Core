@@ -11,7 +11,7 @@ import (
 	"github.com/BitofferHub/pkg/constant"
 	engine "github.com/BitofferHub/pkg/middlewares/gin"
 	"github.com/BitofferHub/pkg/middlewares/log"
-	"github.com/codernull/Seckill-Core/seckill/internal/service"
+	"github.com/codernull/seckill/internal/service"
 	"github.com/gin-gonic/gin"
 )
 

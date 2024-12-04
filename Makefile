@@ -9,11 +9,11 @@ ifeq ($(GOHOSTOS), windows)
 	#Git_Bash= $(subst cmd\,bin\bash.exe,$(dir $(shell where git)))
 	#Git_Bash=$(subst \,/,$(subst cmd\,bin\bash.exe,$(dir $(shell where git))))
 	Git_Bash=$(subst \,/,$(subst \cmd,\\bin,$(dir $(shell where git)))bash.exe)
-	INTERNAL_PROTO_FILES=$(shell $(Git_Bash) -c "find internal -name *.proto")
-	API_PROTO_FILES=$(shell $(Git_Bash) -c "find api -name *.proto")
+	INTERNAL_PROTO_FILES=$(shell $(Git_Bash) -c "find internal -name '*.proto'")
+	API_PROTO_FILES=$(shell $(Git_Bash) -c "find api -name '*.proto'")
 else
-	INTERNAL_PROTO_FILES=$(shell find internal -name *.proto)
-	API_PROTO_FILES=$(shell find api -name *.proto)
+	INTERNAL_PROTO_FILES=$(shell find internal -name '*.proto')
+	API_PROTO_FILES=$(shell find api -name '*.proto')
 endif
 
 .PHONY: init
@@ -39,6 +39,8 @@ config:
 .PHONY: api
 # generate api proto
 api:
+	@echo "Current directory: $$(pwd)"  # 显示当前目录
+	@echo "Proto files: $(API_PROTO_FILES)"  # 显示找到的 proto 文件
 	protoc --proto_path=./api \
 	       --proto_path=./third_party \
  	       --go_out=paths=source_relative:./api \

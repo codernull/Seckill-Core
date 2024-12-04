@@ -3,8 +3,8 @@ package service
 import (
 	"context"
 
-	pb "github.com/codernull/Seckill-Core/seckill/api/seckill/v1"
-	"github.com/codernull/Seckill-Core/seckill/internal/biz"
+	pb "github.com/codernull/seckill/api/seckill/v1"
+	"github.com/codernull/seckill/internal/biz"
 )
 
 // CreateUser

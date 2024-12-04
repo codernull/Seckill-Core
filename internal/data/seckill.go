@@ -6,7 +6,7 @@ import (
 	"fmt"
 
 	"github.com/BitofferHub/pkg/middlewares/log"
-	"github.com/codernull/Seckill-Core/seckill/internal/biz"
+	"github.com/codernull/seckill/internal/biz"
 )
 
 type userXRepo struct {

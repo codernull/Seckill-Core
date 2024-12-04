@@ -1,9 +1,9 @@
 server:
   http:
-    addr: 0.0.0.0:9668
+    addr: 0.0.0.0:10001
     timeout: 1s
   grpc:
-    addr: 0.0.0.0:9669
+    addr: 0.0.0.0:10002
     timeout: 1s
   task:
     tasks:
@@ -22,8 +22,8 @@ data:
   database:
     addr: 127.0.0.1:3306
     user: root
-    password: root@2023
-    database: bitstorm
+    password: "123456"
+    database: bitstorm-svr-go
     max_idle_conn : 2000
     max_open_conn: 20000
     max_idle_time: 30
@@ -31,8 +31,8 @@ data:
 
   redis:
     addr: 127.0.0.1:6379
-    password: "niuge"
-    db: 6
+    password: "123456"
+    db: 0
     pool_size: 20
 
 micro:

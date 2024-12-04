@@ -6,8 +6,8 @@ import (
 
 	"github.com/BitofferHub/pkg/constant"
 	"github.com/BitofferHub/pkg/middlewares/log"
-	pb "github.com/codernull/Seckill-Core/seckill/api/seckill/v1"
-	"github.com/codernull/Seckill-Core/seckill/internal/response"
+	pb "github.com/codernull/seckill/api/seckill/v1"
+	"github.com/codernull/seckill/internal/response"
 	"github.com/gin-gonic/gin"
 )
 

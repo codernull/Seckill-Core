@@ -10,7 +10,7 @@ import (
 	"github.com/go-kratos/kratos/v2/transport/http"
 	clientv3 "go.etcd.io/etcd/client/v3"
 
-	pb "github.com/codernull/Seckill-Core/seckill/api/seckill/v1"
+	pb "github.com/codernull/seckill/api/seckill/v1"
 	"github.com/go-kratos/kratos/v2/middleware/recovery"
 	transgrpc "github.com/go-kratos/kratos/v2/transport/grpc"
 )

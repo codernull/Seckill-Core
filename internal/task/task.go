@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"time"
 
-	pb "github.com/codernull/Seckill-Core/seckill/api/seckill/v1"
-	"github.com/codernull/Seckill-Core/seckill/internal/conf"
-	"github.com/codernull/Seckill-Core/seckill/internal/service"
+	pb "github.com/codernull/seckill/api/seckill/v1"
+	"github.com/codernull/seckill/internal/conf"
+	"github.com/codernull/seckill/internal/service"
 	"github.com/google/uuid"
 	"github.com/google/wire"
 )

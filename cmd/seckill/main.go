@@ -2,12 +2,13 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"os"
 
 	"github.com/BitofferHub/pkg/middlewares/discovery"
 	"github.com/BitofferHub/pkg/middlewares/log"
-	"github.com/codernull/Seckill-Core/seckill/internal/conf"
-	"github.com/codernull/Seckill-Core/seckill/internal/task"
+	"github.com/codernull/seckill/internal/conf"
+	"github.com/codernull/seckill/internal/task"
 	"github.com/go-kratos/kratos/v2"
 	"github.com/go-kratos/kratos/v2/config"
 	"github.com/go-kratos/kratos/v2/config/file"
@@ -30,7 +31,7 @@ var (
 )
 
 func init() {
-	flag.StringVar(&flagconf, "conf", "../../configs", "config path, eg: -conf config.yaml")
+	flag.StringVar(&flagconf, "conf", "./configs", "config path, eg: -conf config.yaml")
 
 }
 
@@ -61,6 +62,9 @@ func main() {
 	defer c.Close()
 
 	if err := c.Load(); err != nil {
+		currentDir, err := os.Getwd()
+		fmt.Printf("Current directory: %s\n", currentDir)
+		fmt.Printf("Config path: %s\n", flagconf)
 		panic(err)
 	}
 
