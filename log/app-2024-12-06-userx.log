@@ -1,0 +1,36 @@
+2024-12-06T14:01:39.732+0800	INFO	log/gormlog.go:66	caller is seckill.go:17
+2024-12-06T14:01:39.733+0800	INFO	log/gormlog.go:66	Trace-ID:, Database Query: DELETE FROM `t_user_info` WHERE id = 4, time: 21.327834ms, rows: 0, err: <nil>
+2024-12-06T14:01:39.739+0800	INFO	log/gormlog.go:66	caller is seckill.go:44
+2024-12-06T14:01:39.739+0800	INFO	log/gormlog.go:66	Trace-ID:, Database Query: INSERT INTO `t_user_info` (`user_name`,`pwd`,`sex`,`age`,`email`,`contact`,`mobile`,`id_card`) VALUES ('da1115cc-f7b5-4b61-a5fb-bfecd441f6a1','12345',0,20,'12345678@qq.com','11','11','11'), time: 5.79825ms, rows: 1, err: <nil>
+2024-12-06T14:19:09.381+0800	INFO	log/gormlog.go:66	caller is seckill.go:17
+2024-12-06T14:19:09.382+0800	INFO	log/gormlog.go:66	Trace-ID:, Database Query: DELETE FROM `t_user_info` WHERE id = 4, time: 3.607625ms, rows: 0, err: <nil>
+2024-12-06T14:19:09.386+0800	INFO	log/gormlog.go:56	caller is seckill.go:44
+2024-12-06T14:19:09.386+0800	ERROR	log/gormlog.go:56	Trace-ID:, Database Error sql: INSERT INTO `t_user_info` (`user_name`,`pwd`,`sex`,`age`,`email`,`contact`,`mobile`,`id_card`) VALUES ('aceea8be-3c72-4c79-901f-9b9a8f9771f9','12345',0,20,'12345678@qq.com','11','11','11'), time: 3.487417ms, rows: 0, err: Error 1062 (23000): Duplicate entry '11' for key 't_user_info.idx_mobile'
+2024-12-06T14:23:41.378+0800	INFO	log/gormlog.go:66	caller is seckill.go:17
+2024-12-06T14:23:41.380+0800	INFO	log/gormlog.go:66	Trace-ID:, Database Query: DELETE FROM `t_user_info` WHERE id = 4, time: 4.252042ms, rows: 0, err: <nil>
+2024-12-06T14:23:41.382+0800	INFO	log/gormlog.go:56	caller is seckill.go:44
+2024-12-06T14:23:41.382+0800	ERROR	log/gormlog.go:56	Trace-ID:, Database Error sql: INSERT INTO `t_user_info` (`user_name`,`pwd`,`sex`,`age`,`email`,`contact`,`mobile`,`id_card`) VALUES ('1643bb8c-40fd-4ce4-9465-095cb42c2b25','12345',0,20,'12345678@qq.com','11','11','11'), time: 2.120459ms, rows: 0, err: Error 1062 (23000): Duplicate entry '11' for key 't_user_info.idx_mobile'
+2024-12-06T14:32:54.598+0800	INFO	log/gormlog.go:66	caller is seckill.go:17
+2024-12-06T14:32:54.599+0800	INFO	log/gormlog.go:66	Trace-ID:, Database Query: DELETE FROM `t_user_info` WHERE id = 4, time: 3.245375ms, rows: 0, err: <nil>
+2024-12-06T14:32:54.602+0800	INFO	log/gormlog.go:56	caller is seckill.go:44
+2024-12-06T14:32:54.602+0800	ERROR	log/gormlog.go:56	Trace-ID:, Database Error sql: INSERT INTO `t_user_info` (`user_name`,`pwd`,`sex`,`age`,`email`,`contact`,`mobile`,`id_card`) VALUES ('81f678b0-adcd-4edb-8153-5ed78b0f8169','12345',0,20,'12345678@qq.com','11','11','11'), time: 2.853791ms, rows: 0, err: Error 1062 (23000): Duplicate entry '11' for key 't_user_info.idx_mobile'
+2024-12-06T14:33:18.705+0800	INFO	interfaces/routes.go:53	Trace-ID:niuge1245-HContent-Type:application/json-H, ReqPath[/get_user_info]-Cost[20.208µs]
+
+2024-12-06T14:33:18.712+0800	INFO	log/gormlog.go:53	caller is seckill.go:110
+2024-12-06T14:33:18.712+0800	INFO	log/gormlog.go:53	Trace-ID:niuge1245-HContent-Type:application/json-H, Database ErrRecordNotFound，sql: SELECT * FROM `t_user_info` WHERE id = 0 ORDER BY `t_user_info`.`id` LIMIT 1, time: 6.402958ms, rows: 0
+2024-12-06T14:42:41.971+0800	INFO	log/gormlog.go:66	caller is seckill.go:17
+2024-12-06T14:42:41.972+0800	INFO	log/gormlog.go:66	Trace-ID:, Database Query: DELETE FROM `t_user_info` WHERE id = 4, time: 2.941167ms, rows: 0, err: <nil>
+2024-12-06T14:42:41.974+0800	INFO	log/gormlog.go:56	caller is seckill.go:44
+2024-12-06T14:42:41.974+0800	ERROR	log/gormlog.go:56	Trace-ID:, Database Error sql: INSERT INTO `t_user_info` (`user_name`,`pwd`,`sex`,`age`,`email`,`contact`,`mobile`,`id_card`) VALUES ('2cb82481-7026-4bfe-9d12-37f7f5c76334','12345',0,20,'12345678@qq.com','11','11','11'), time: 1.79425ms, rows: 0, err: Error 1062 (23000): Duplicate entry '11' for key 't_user_info.idx_mobile'
+2024-12-06T14:44:14.148+0800	INFO	interfaces/routes.go:53	Trace-ID:niuge1245-HContent-Type:application/json-H, ReqPath[/get_user_info]-Cost[36.458µs]
+
+2024-12-06T14:44:14.175+0800	INFO	log/gormlog.go:53	caller is seckill.go:110
+2024-12-06T14:44:14.175+0800	INFO	log/gormlog.go:53	Trace-ID:niuge1245-HContent-Type:application/json-H, Database ErrRecordNotFound，sql: SELECT * FROM `t_user_info` WHERE id = 0 ORDER BY `t_user_info`.`id` LIMIT 1, time: 25.738333ms, rows: 0
+2024-12-06T14:45:18.484+0800	INFO	interfaces/routes.go:53	Trace-ID:niuge1245-HContent-Type:application/json-H, ReqPath[/get_user_info]-Cost[731.083µs]
+
+2024-12-06T14:45:18.505+0800	INFO	log/gormlog.go:53	caller is seckill.go:110
+2024-12-06T14:45:18.505+0800	INFO	log/gormlog.go:53	Trace-ID:niuge1245-HContent-Type:application/json-H, Database ErrRecordNotFound，sql: SELECT * FROM `t_user_info` WHERE id = 0 ORDER BY `t_user_info`.`id` LIMIT 1, time: 20.845125ms, rows: 0
+2024-12-06T14:47:12.910+0800	INFO	interfaces/routes.go:53	Trace-ID:niuge1245-HContent-Type:application/json-H, ReqPath[/get_user_info]-Cost[71.167µs]
+
+2024-12-06T14:47:12.937+0800	INFO	log/gormlog.go:66	caller is seckill.go:110
+2024-12-06T14:47:12.937+0800	INFO	log/gormlog.go:66	Trace-ID:niuge1245-HContent-Type:application/json-H, Database Query: SELECT * FROM `t_user_info` WHERE id = 0 ORDER BY `t_user_info`.`id` LIMIT 1, time: 25.786959ms, rows: 1, err: <nil>

@@ -1,0 +1,10 @@
+2024-12-05T10:30:47.790+0800	INFO	log/gormlog.go:39	caller is db.go:102
+2024-12-05T10:30:47.792+0800	ERROR	log/gormlog.go:39	Trace-ID:, failed to initialize database, got error dial tcp: lookup mysql: no such host
+2024-12-05T10:34:59.167+0800	INFO	log/gormlog.go:39	caller is db.go:102
+2024-12-05T10:34:59.168+0800	ERROR	log/gormlog.go:39	Trace-ID:, failed to initialize database, got error dial tcp: lookup mysql: no such host
+2024-12-05T10:41:28.380+0800	INFO	log/gormlog.go:39	caller is db.go:102
+2024-12-05T10:41:28.381+0800	ERROR	log/gormlog.go:39	Trace-ID:, failed to initialize database, got error dial tcp: lookup mysql: no such host
+2024-12-05T10:46:44.186+0800	INFO	log/gormlog.go:39	caller is db.go:102
+2024-12-05T10:46:44.187+0800	ERROR	log/gormlog.go:39	Trace-ID:, failed to initialize database, got error dial tcp: lookup mysql: no such host
+2024-12-05T23:15:59.820+0800	INFO	log/gormlog.go:39	caller is db.go:102
+2024-12-05T23:15:59.822+0800	ERROR	log/gormlog.go:39	Trace-ID:, failed to initialize database, got error dial tcp: lookup 127.0.0.1::3306: no such host

@@ -20,17 +20,17 @@ server:
 
 data:
   database:
-    addr: 127.0.0.1:3306
+    addr: 0.0.0.0:8086
     user: root
     password: "123456"
     database: bitstorm-svr-go
     max_idle_conn : 2000
     max_open_conn: 20000
     max_idle_time: 30
-    slow_threshold_millisecond: 10 # SQL执行超过10ms，就算慢sql
+    slow_threshold_millisecond: 100 # SQL执行超过10ms，就算慢sql
 
   redis:
-    addr: 127.0.0.1:6379
+    addr: 0.0.0.0:8089
     password: "123456"
     db: 0
     pool_size: 20

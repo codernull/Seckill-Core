@@ -2,6 +2,7 @@ package data
 
 import (
 	"context"
+	"fmt"
 
 	"github.com/BitofferHub/pkg/middlewares/cache"
 	"github.com/BitofferHub/pkg/middlewares/gormcli"
@@ -48,6 +49,7 @@ func NewData(db *gorm.DB, cache *cache.Client) *Data {
 
 func NewDatabase(conf *conf.Data) *gorm.DB {
 	dt := conf.GetDatabase()
+	fmt.Print(" data base conf ", dt)
 	gormcli.Init(
 		gormcli.WithAddr(dt.GetAddr()),
 		gormcli.WithUser(dt.GetUser()),

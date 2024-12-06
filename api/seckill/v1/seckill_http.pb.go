@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-http v2.8.2
 // - protoc             v5.29.0
-// source: seckill/v1/seckill.proto
+// source: api/seckill/v1/seckill.proto
 
 package v1
 

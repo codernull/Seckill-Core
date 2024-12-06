@@ -43,9 +43,13 @@ wire
 ## Docker
 ```bash
 # build
-docker build -t <your-docker-image-name> .
+docker build -t seckill .
 
 # run
-docker run --rm -p 8000:8000 -p 9000:9000 -v </path/to/your/configs>:/data/conf <your-docker-image-name>
+docker run --cpus=2 --rm -p 8000:8000 -p 9000:9000 -v configs:/data/conf seckill
 ```
 
+curl -H "Trace-ID:niuge1245"-H"Content-Type:application/json"-H "User-ID:1" "http://localhost:9668/get_user_info"
+
+
+curl -H "Trace-ID:niuge1245"-H"Content-Type:application/json"-H "User-ID:1" "http://0.0.0.0:10001/get_user_info"

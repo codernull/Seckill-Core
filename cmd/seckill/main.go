@@ -3,8 +3,6 @@ package main
 import (
 	"flag"
 	"fmt"
-	"os"
-
 	"github.com/BitofferHub/pkg/middlewares/discovery"
 	"github.com/BitofferHub/pkg/middlewares/log"
 	"github.com/codernull/seckill/internal/conf"
@@ -14,6 +12,7 @@ import (
 	"github.com/go-kratos/kratos/v2/config/file"
 	"github.com/go-kratos/kratos/v2/transport/grpc"
 	"github.com/go-kratos/kratos/v2/transport/http"
+	"os"
 
 	_ "go.uber.org/automaxprocs"
 )
@@ -53,6 +52,7 @@ func newApp(gs *grpc.Server, hs *http.Server, ts *task.TaskServer) *kratos.App {
 }
 
 func main() {
+
 	flag.Parse()
 	c := config.New(
 		config.WithSource(
@@ -72,7 +72,6 @@ func main() {
 	if err := c.Scan(&bc); err != nil {
 		panic(err)
 	}
-
 	InitSource(&bc)
 	app, cleanup, err := wireApp(bc.GetServer(), bc.GetData())
 	if err != nil {

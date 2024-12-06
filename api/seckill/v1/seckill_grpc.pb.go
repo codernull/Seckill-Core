@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.5.1
 // - protoc             v5.29.0
-// source: seckill/v1/seckill.proto
+// source: api/seckill/v1/seckill.proto
 
 package v1
 
@@ -307,5 +307,5 @@ var UserX_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "seckill/v1/seckill.proto",
+	Metadata: "api/seckill/v1/seckill.proto",
 }
